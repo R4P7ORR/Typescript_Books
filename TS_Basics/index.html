@@ -7,7 +7,13 @@
     <title>Vite + TS</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <form method="post" id="szamForm">
+        <input type="number" id="szamlalo">
+        <input type="submit" value="Elküld">
+        <p id="negyzet"></p>
+      </form>
+    </div>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

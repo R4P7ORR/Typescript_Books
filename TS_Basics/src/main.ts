@@ -1,24 +1,41 @@
-import './style.css'
-import typescriptLogo from './typescript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.ts'
+let i = 5;
+i++;
+i = 1;
+//i = asdf;
 
-document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://www.typescriptlang.org/" target="_blank">
-      <img src="${typescriptLogo}" class="logo vanilla" alt="TypeScript logo" />
-    </a>
-    <h1>Vite + TypeScript</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite and TypeScript logos to learn more
-    </p>
-  </div>
-`
+let v1 :number;
 
-setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
+//v1 = "asdf";   
+v1 = 2;
+
+let t1 :number[] = [];
+t1.push(1);
+
+
+//Union types
+let ns : number | string;
+ns = "asdf";
+ns = 1;
+//ns = false;
+
+let a = document.getElementById("asdf");
+function szamChange(){
+  let sz = document.getElementById("szamlalo") as HTMLInputElement;
+  let szam = parseInt(sz.value);
+  let negyzet = szam * szam;
+  document.getElementById("negyzet")!.textContent = negyzet.toString();
+}
+
+function szamKuldes(e: SubmitEvent) : void{
+  let szam = parseInt((document.getElementById("szamlalo") as HTMLInputElement).value);
+  if(szam < 0){
+    e.preventDefault();
+  }
+}
+
+function init(){
+  document.getElementById("szamlalo")!.addEventListener("input", szamChange);
+  document.getElementById("szamForm")!.addEventListener("submit", szamKuldes)
+}
+
+document.addEventListener("DOMContentLoaded", init);
