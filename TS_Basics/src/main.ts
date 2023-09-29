@@ -1,3 +1,6 @@
+import { DBUser } from "./DBUser";
+import { User } from "./User";
+
 let i = 5;
 i++;
 i = 1;
@@ -32,6 +35,16 @@ function szamKuldes(e: SubmitEvent) : void{
     e.preventDefault();
   }
 }
+
+let obj : User= {
+  nev: "Bela", eletkor: 16, haziallat: null,
+}
+obj.haziallat = "Bodri";
+//
+
+let masikUser = new DBUser(2, "Kata");
+masikUser.szuletesnap();
+console.log(masikUser);
 
 function init(){
   document.getElementById("szamlalo")!.addEventListener("input", szamChange);
