@@ -9,17 +9,17 @@
   <body>
     <input type="text" id="productName" placeholder="Product Name">
     <input type="number" id="productPrice" placeholder="Product Price">
-    <input type="number" id="productCode" placeholder="Product Code">
+    <input type="text" id="productCode" placeholder="Product Code" maxlength="11">
     <button id="sendProduct">Send Product</button>
-    <p id="errorMessage"></p>
+    <p id="errorMessage" style="color: red;"></p>
 
-    <table id="productTable">
+    <table">
       <thead>
         <tr>Name</tr>
         <tr>Price</tr>
         <tr>Code</tr>
       </thead>
-      <tbody>
+      <tbody id="productTable">
 
       </tbody>
     </table>

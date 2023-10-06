@@ -1,0 +1,10 @@
+body{
+  background-color: darkslateblue;
+  color: aliceblue;
+}
+tr{
+  background-color: antiquewhite;
+}
+tr:nth-child(2n){
+  background-color: gray;
+}
