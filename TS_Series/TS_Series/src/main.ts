@@ -32,3 +32,9 @@ function addToList(){
 
 
 document.getElementById("submitButton")?.addEventListener("click", addToList)
+
+/*function loaded(){
+  let a = document.getElementById("load");
+  a!.setAttribute("class", "");
+}
+document.addEventListener("DOMContentLoaded", loaded);*/
