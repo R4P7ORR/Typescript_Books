@@ -5,16 +5,16 @@ function init(){
   document.getElementById("sendProduct")!.addEventListener("click", addToList);
 }
 function write(){
-  const tBody = document.getElementById("productTable")!;
+  let tBody = document.getElementById("productTable")!;
   tBody.innerHTML = '';
   for(const p of products){
     let tableRow = document.createElement("tr");
     let tdName = document.createElement("td");
     let tdPrice = document.createElement("td");
     let tdCode = document.createElement("td");
-    tdName.textContent = p.name;
+    tdName.textContent = p.name.toString();
     tdPrice.textContent = p.price.toString();
-    tdCode.textContent = p.code;
+    tdCode.textContent = p.code.toString();
     tableRow.appendChild(tdName);
     tableRow.appendChild(tdPrice);
     tableRow.appendChild(tdCode);
@@ -44,10 +44,4 @@ function addToList(){
     }
   }
 }
-
-
-
-
-
-
 document.addEventListener("DOMContentLoaded", init);

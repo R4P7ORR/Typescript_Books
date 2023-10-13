@@ -4,7 +4,9 @@ body{
 }
 tr{
   background-color: antiquewhite;
+  color: black;
 }
 tr:nth-child(2n){
   background-color: gray;
+  color: black;
 }
