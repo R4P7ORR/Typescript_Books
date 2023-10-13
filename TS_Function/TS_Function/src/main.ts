@@ -1,16 +1,13 @@
-const fv1 = (param1: number, param2: string) : string => {
-  return param1.toPrecision(2) + param2;
-}
+document.addEventListener("DOMContentLoaded", () =>{
+  for (let i = 0; i < 5; i++){
+    const btn = document.createElement("button");
+    document.getElementById("app")!.appendChild(btn);
 
-const fv2 = (param1: number, param2: string) => param1.toPrecision(2) + param2;
-
-const t1 = [ 1, 46, 7124 ];
-const eredmenyTomb = t1.filter(e =>{
-  return e > 10;
-}).map( e => e.toFixed(5));
-
-document.addEventListener("DOMContentLoaded", (e) =>{
-  document.getElementById("app")!.addEventListener("click", e1 => {
-    console.log(e1.button);
-  })
-})
+    btn.textContent = "Gomb";
+    btn.addEventListener("click", () => {
+      const rndSzin = '#' + Math.floor(Math.random() * (2 ** 24)).toString(16);
+      btn.style.backgroundColor = rndSzin;
+      console.log(i);
+    })
+  }
+});
